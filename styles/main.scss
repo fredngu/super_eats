@@ -1,10 +1,74 @@
 // body {
-
+//   display: flex;
 // }
 
-$main-color: #458c8f;
+$main-color: #d1e2e3;
+$secondary-color: #0d7377;
+$color-3: #129fa5;
+
+.restaurant-main-banner {
+  display: flex;
+  margin-top: 5vh;
+  width: 100%;
+  height: 500px;
+  background-color: $main-color;
+  background-image: url("/images/restaurant-background.png");
+  justify-content: center;
+}
 
 .restaurant-main-image {
   width: 800px;
   height: 500px;
+}
+
+.restaurant-containers {
+  display: flex;
+  padding: 5%;
+  margin: 5%;
+  width: 90%;
+  height: 120vh;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 10px $secondary-color;
+  border-style: solid;
+  border-radius: 25px;
+  background-image: url("/images/beige-tiles.png");
+}
+
+.restaurant-containers .restaurants {
+  display: flex;
+  padding-top: 5vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align:center;
+  align-content: center;
+  width: 30%;
+  height: 100vh;
+  border: 5px $color-3;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.restaurants img {
+  width: 300px;
+  height: 300px;
+  border-style: solid;
+}
+
+.restaurant-description {
+  font-size: 20px;
+  text-align: justify;
+  padding: 10%;
+  margin: 5%;
+  border: 2px $secondary-color;
+  border-style: solid;
+  border-radius: 5px;
+  height: 35vh;
+}
+
+.menu-items {
+  height: 50px;
+  width: 150px;
+  font-size: 30px;
 }
