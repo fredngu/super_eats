@@ -1,0 +1,31 @@
+$main-color: #d1e2e3;
+$secondary-color: #0d7377;
+$color-3: #129fa5;
+
+.menu-containers {
+  display: flex;
+  padding: 5%;
+  margin: 5%;
+  width: 90%;
+  height: 120vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 10px $secondary-color;
+  border-style: solid;
+  border-radius: 25px;
+  background-image: url("/images/beige-tiles.png");
+}
+
+.menu-header {
+  border-style: solid;
+  font-size: 50px;
+}
+
+.menu-sections {
+  font-size: 20px;
+}
+.menu-items {
+  font-size: 30px;
+
+}
