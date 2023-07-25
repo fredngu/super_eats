@@ -1,18 +1,78 @@
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+// body {
+//   display: flex;
+// }
 
-  background: rgb(163, 208, 219);
-  background: linear-gradient(
-    227deg,
-    rgba(163, 208, 219, 1) 0%,
-    rgba(163, 176, 219, 1) 20%,
-    rgba(163, 173, 219, 1) 34%,
-    rgba(163, 219, 208, 1) 59%,
-    rgba(163, 208, 219, 1) 74%,
-    rgba(163, 208, 219, 1) 100%
-  );
+$main-color: #d1e2e3;
+$secondary-color: #0d7377;
+$color-3: #129fa5;
+$header-font: 'Norwester';
+
+//Nav Bar
+.restaurant-main-banner {
+  display: flex;
+  margin-top: 5vh;
+  width: 100%;
+  height: 25vh;
+  background-color: $main-color;
+  background-image: url("/images/restaurant-background.png");
+  justify-content: center;
+}
+
+.restaurant-main-image {
+  width: 40vh;
+  height: 25vh;
+}
+
+// Restaurants
+.restaurant-containers {
+  display: flex;
+  padding: 5%;
+  margin: 5%;
+  width: 90%;
+  height: 120vh;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 10px $secondary-color;
+  border-style: solid;
+  border-radius: 25px;
+  background-image: url("/images/beige-tiles.png");
+}
+
+.restaurant-containers .restaurants {
+  font-family: $header-font;
+  display: flex;
+  padding-top: 5vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align:center;
+  align-content: center;
+  width: 30%;
+  height: 100vh;
+  border: 5px $color-3;
+  border-style: solid;
+  border-radius: 25px;
+  background-color: #fff;
+}
+
+.restaurants img {
+  width: 25vh;
+  height: 25vh;
+  border-style: solid;
+}
+
+.restaurant-description {
+  font-size: 2vh;
+  text-align: justify;
+  padding: 10%;
+  margin: 5%;
+  border: 2px $secondary-color;
+  border-style: solid;
+  border-radius: 5px;
+  height: 35vh;
+}
+
+.menu-items {
+  height: 10vh;
+  width: 20vh;
+  font-size: 2vh;
 }
