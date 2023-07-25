@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Restaurant - Orders</title>
+
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+    <link rel="stylesheet" href="/vendor/border-box.css" />
+    <link rel="stylesheet" href="/styles/menu.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/layout.css" />
+
+    <script src="/vendor/jquery-3.0.0.js"></script>
+    <script defer src="/scripts/app.js"></script>
+  </head>
+  <body>
+    <%- include('partials/_header') %>
+  <div class="menu-containers">
+    <header class="menu-header">
+      Luigi's Restaurant
+    </header>
+    <article class="menu-sections">
+      <span class="menu-title">Appetizers</span>
+      <section class="menu-option">
+          <img class="menu-image" src="images/aracini.jpg">
+        <div class="menu-items">Aracini</div>
+        <form id='counter' method='POST' class='quantity' action='#'>
+          <input type='button' value='-' class='qtyminus minus' field='quantity' />
+          <input type='text' name='quantity' value='0' class='qty' />
+          <input type='button' value='+' class='qtyplus plus' field='quantity' />
+        </form>
+      </section>
+      <section class="menu-option">
+        <img class="menu-image" src="images/bruschetta.jpg">
+        <div class="menu-items">Bruschetta</div>
+        <form id='counter' method='POST' class='quantity' action='#'>
+          <input type='button' value='-' class='qtyminus minus' field='quantity' />
+          <input type='text' name='quantity' value='0' class='qty' />
+          <input type='button' value='+' class='qtyplus plus' field='quantity' />
+        </form>
+      </section>
+      <section class="menu-option">
+        <img class="menu-image" src="images/caprese.jpg">
+        <div class="menu-items">Caprese</div>
+        <form id='counter' method='POST' class='quantity' action='#'>
+          <input type='button' value='-' class='qtyminus minus' field='quantity' />
+          <input type='text' name='quantity' value='0' class='qty' />
+          <input type='button' value='+' class='qtyplus plus' field='quantity' />
+        </form>
+      </section>
+      <div class="order-button">
+        <form id="checkout" method="POST" action='#'>
+          <button class="menu-items">Place Order</button>
+        </form>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
