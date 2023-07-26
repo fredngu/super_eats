@@ -1,8 +1,8 @@
 // restaurantsQueries.js
-const db = require('../connection');
+const db = require('../connection.js');
 
 const getAllRestaurants = function() {
-  const queryString = 'SELECT * FROM restaurants;';
+  const queryString = 'SELECT * FROM restaurants LIMIT 3;';
   return db.query(queryString).then(data => data.rows);
 };
 

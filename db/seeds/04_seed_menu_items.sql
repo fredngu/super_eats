@@ -24,5 +24,3 @@ VALUES
   ('Calzone', 'Calzone', 'https://www.foodiesfeed.com/wp-content/uploads/2020/05/pasta-tomatoes-and-other-italian-ingredients-1.jpg', 'Main Course', 18),
   ('Limoncello', 'Limoncello', 'https://www.foodiesfeed.com/wp-content/uploads/2022/11/fancy-dessert-with-biscuit-on-top.jpg', 'Dessert', 19),
   ('Cappuccino', 'Cappuccino', 'https://www.foodiesfeed.com/wp-content/uploads/2019/01/dreamy-flatwhite-coffee-with-perfect-latte-art-2.jpg', 'Beverage', 20);
-
-
