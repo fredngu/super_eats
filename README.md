@@ -39,20 +39,20 @@ SuperEats is a food delivery application that allows customers to order deliciou
    
 2. Install the required dependencies:
 
-  ```bash
-  npm install
+    ```bash
+    npm install
 
 3. Set up the database:
 
   - Create a PostgreSQL database and update the connection settings in db.js file.
   - Run the database migration to create tables:
-  ```bash
-  npm run migrate
+    ```bash
+    npm run migrate
 
 4. Start the server:
 
-  ``bash
-  npm start
+    ```bash
+    npm start
 
 5. Open your browser and visit http://localhost:8080 to access the application.
 
