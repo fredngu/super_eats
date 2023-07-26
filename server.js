@@ -27,8 +27,14 @@ app.use(
 app.use(express.static('public'));
 
 //cookie middleware
-const cookieParser = require('cookie-parser');
-app.use(cookieParser());
+var cookieSession = require('cookie-session')
+app.use(cookieSession({
+  name: 'session',
+  keys: ["key1"],
+
+  // Cookie Options
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}))
 
 // Separated Routes for each Resource
 // Note: Feel free to replace the example routes below with your own
@@ -68,14 +74,17 @@ app.get('/restaurant', (req, res) => {
   res.render('restaurant');
 });
 
-//COOKIE WIP
+//Login
 app.get('/customers/signin/:id', (req, res) => {
-  res.render('customer_signin');
+  req.session.user_id = req.params.id;
+  console.log(`User now signed in as user #${req.params.id}`)
+  res.redirect('/');
 });
-// app.post('/customers/signin/', (req, res) => {
-//   res.cookie('cookieName', '1', { expires: new Date(Date.now() + 900000), httpOnly: true })
-//   console.log(req.cookies.cookieName)}
-// )
+// Logout function - haven't been able to test yet
+app.post("/logout", (req, res) => {
+  req.session = null
+  res.redirect("/");
+});
 
 app.get("/restaurants/restaurant/orders", function(req,res){
   res.render('restaurant_all_orders');
