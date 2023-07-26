@@ -1,6 +1,3 @@
-# Supereats
-=========
-
 # SuperEats - Food Pickup Application
 
 ![SuperEats Logo](https://yourdomain.com/logo.png)
