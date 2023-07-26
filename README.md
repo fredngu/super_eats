@@ -8,9 +8,9 @@
 SuperEats is a food delivery application that allows customers to order delicious food from their favorite restaurants and have it ready for pickup. With an easy-to-use interface and a wide selection of restaurants and menu items, SuperEats provides a seamless food ordering experience. is part of LightHouse Labs Bootcamp.
 
 ## Authors
-![Glauber Marques](https://github.com/glaubervilane.png)
-![Paul McAllister](https://github.com/pmcall.png) 
-![Frederik Nguyen](https://github.com/fredngu.png)
+[Glauber Marques](https://github.com/glaubervilane)
+[Paul McAllister](https://github.com/pmcall)
+[Frederik Nguyen](https://github.com/fredngu)
 
 ## Features
 
