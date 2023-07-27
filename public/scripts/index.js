@@ -27,13 +27,13 @@ const loadRestaurant = (restaurant) => {
       </form>
     </article>
     `
-  )
-  return $restaurantSection
-}
+  );
+  return $restaurantSection;
+};
 
 $(document).ready(function() {
   for (const restaurant of restaurantObj) {
     $('#restaurant-containers').append(loadRestaurant(restaurant));
   }
-})
+});
 
