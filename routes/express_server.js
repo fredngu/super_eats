@@ -17,7 +17,7 @@ app.listen(PORT, () => {
 //Placeholder for home, redirects to restaurants directory
 app.get("/", (req, res) => {
   console.log("Root Directory!");
-  response.redirect('restaurants')
+  res.redirect('restaurants')
 });
 
 //RESTAURANTS

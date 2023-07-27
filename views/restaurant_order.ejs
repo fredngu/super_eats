@@ -12,14 +12,65 @@
   <link rel="stylesheet" href="/styles/menu.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/restaurant-order.css" />
+  <link rel="stylesheet" href="/styles/nav.css" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cedarville+Cursive&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cedarville+Cursive&family=Rubik&display=swap" rel="stylesheet">
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
+  <script src="/scripts/restaurant_order.js"></script>
 </head>
+
 <body>
   <%- include('partials/_header') %>
-  <div>Order Banner</div>
-  <div>Table for Data</div>
-
+  <article class="res-order-section">
+    <div class="order-banner">
+      <span class="order-banner-msg"><a>Order #1</a></span>
+    </div>
+    <div class="order-time">
+      <div class="time-info">
+        <form action="#" method="#" id="time-input">
+          <label for="time" class="time-label">Time Until Ready (min):</label>
+          <input type="text" id="time" name="time">
+        </form>
+      </div>
+      <div class="sms-container">
+        <button class="send-sms" form="time-input" type="submit" value="submit">Send SMS</button>
+      </div>
+    </div>
+    <table class="order-table">
+      <thead>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mac'n'Cheese</td>
+          <td>1</td>
+          <td>$10.00</td>
+        </tr>
+        <tr>
+          <td>Wine</td>
+          <td>1</td>
+          <td>$10.00</td>
+        </tr>
+        <tr>
+          <td>Cheese</td>
+          <td>3</td>
+          <td>$10.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <form method="GET" action="/" class="return-button"><button class="main-menu-button">Return to Main Menu</button></form>
+  </article>
 </body>
 </html>
