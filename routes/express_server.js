@@ -4,11 +4,6 @@ const PORT = 8080; // default port 8080
 
 app.set("view engine", "ejs");
 
-// const urlDatabase = {
-//   "b2xVn2": "http://www.lighthouselabs.ca",
-//   "9sm5xK": "http://www.google.com"
-// };
-
 //App is connected
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}!`);
@@ -17,7 +12,7 @@ app.listen(PORT, () => {
 //Placeholder for home, redirects to restaurants directory
 app.get("/", (req, res) => {
   console.log("Root Directory!");
-  response.redirect('restaurants')
+  res.redirect('restaurants')
 });
 
 //RESTAURANTS
