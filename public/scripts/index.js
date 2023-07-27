@@ -1,38 +1,39 @@
-const loadRestaurant = () => {
-  let $restaurant = (
+const restaurantObj = [
+  {
+    name: "Luigi's Restaurant",
+    image: "images/pasta.jpg",
+    description: "A culinary journey to Italy. Enjoy authentic flavors, handcrafted pasta, wood-fired pizza, and a delightful selection of Italian wines. Our warm hospitality and rustic ambiance complete the experience. Buon Appetito!",
+  },
+  {
+    name: "Dragon Wok Garden",
+    image: "images/wok.jpg",
+    description: "The sizzle of the wok and the aroma of authentic Chinese cuisine fill the air. Discover a symphony of bold flavors and fresh ingredients as our skilled chefs craft delectable stir-fries, noodles, and rice dishes right before your eyes."
+  },
+  {
+    name: "Smokehouse Grill",
+    image: "images/grill.jpg",
+    description: "Smokehouse Grill, where the art of smoking meats meets culinary excellence. Indulge in a tantalizing fusion of smoky flavors, perfectly grilled meats, and savory barbecue classics."
+  }];
+
+const loadRestaurant = (restaurant) => {
+  let $restaurantSection = (
     `
     <article class="restaurants">
-      <div><h2>Luigi's Restaurant</h2></div>
-      <div><img src="images/pasta.jpg"></div>
-      <div><p class="restaurant-description">A culinary journey to Italy. Enjoy authentic flavors, handcrafted pasta, wood-fired pizza, and a delightful selection of Italian wines. Our warm hospitality and rustic ambiance complete the experience. Buon Appetito!"</p></div>
-      <form method="GET" action="/restaurants">
-        <button class="menu-items">View Menu</button>
-      </form>
-    </article>
-    <article class="restaurants">
-      <div><h2>Dragon Wok Garden</h2></div>
-      <div><img src="images/wok.jpg"></div>
-      <div><p class="restaurant-description">The sizzle of the wok and the aroma of authentic Chinese cuisine fill the air. Discover a symphony of bold flavors and fresh ingredients as our skilled chefs craft delectable stir-fries, noodles, and rice dishes right before your eyes.</p></div>
-      <form method="GET" action="/restaurants">
-        <button class="menu-items">View Menu</button>
-      </form>
-    </article>
-    <article class="restaurants">
-      <div><h2>Smokehouse Grill</h2></div>
-      <div><img src="images/grill.jpg"></div>
-      <div><p class="restaurant-description">Smokehouse Grill, where the art of smoking meats meets culinary excellence. Indulge in a tantalizing fusion of smoky flavors, perfectly grilled meats, and savory barbecue classics. Our passion for quality ingredients and slow-cooked perfection shines in every dish, offering a delightful feast for your senses.</p></div>
-      <form method="GET" action='/restaurants'>
+      <div><h2>${restaurant.name}</h2></div>
+      <div><img src=${restaurant.image}></div>
+      <div><p class="restaurant-description">${restaurant.description}</p></div>
+      <form method="GET" action="/restaurant">
         <button class="menu-items">View Menu</button>
       </form>
     </article>
     `
   )
-  return $restaurant
+  return $restaurantSection
 }
 
 $(document).ready(function() {
-  $('#restaurant-containers').append(loadRestaurant());
-
+  for (const restaurant of restaurantObj) {
+    $('#restaurant-containers').append(loadRestaurant(restaurant));
+  }
 })
 
-console.log("hello world")
