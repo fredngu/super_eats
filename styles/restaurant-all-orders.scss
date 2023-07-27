@@ -1,3 +1,67 @@
 $main-color: #d1e2e3;
 $secondary-color: #0d7377;
 $color-3: #129fa5;
+
+.res-order-section {
+  display: flex;
+  padding: 5%;
+  margin: 5%;
+  width: 90%;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  border: 10px $secondary-color;
+  border-style: solid;
+  border-radius: 25px;
+  background-image: url("/images/beige-tiles.png");
+}
+
+.order-banner {
+  margin: 1%;
+  width: 100%;
+  height: 50%;
+  border: 10px $color-3;
+  border-style: solid;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: no-repeat;
+  background-image: url("/images/restaurant-order-banner.jpg");
+  background-size: cover;
+}
+
+.order-banner-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 90%;
+  background: rgb(0, 0, 0, 0.8)
+}
+
+.order-banner-msg a{
+  font-size: 10vh;
+  color: white;
+  opacity: 100%;
+  font-family: 'Bungee', cursive;
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+.order-table {
+  margin: 2vh;
+  width: 100%;
+  border-collapse: collapse;
+  background-color:#e8ebeb;
+  text-align: center;
+}
+
+th, td {
+	border: 1px solid black;
+
+}
+
+th {
+  background-color: #129fa5;
+  color: white;
+}

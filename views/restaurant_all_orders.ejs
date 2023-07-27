@@ -29,6 +29,52 @@
 </head>
 <body>
   <%- include('partials/_header') %>
+  <article class="res-order-section">
+    <div class="order-banner">
+      <span class="order-banner-msg"><a>Luigi's Orders</a></span>
+    </div>
+    <table class="order-table">
+      <thead>
+        <th>Order ID</th>
+        <th>SMS Sent</th>
+        <th>Customer Name</th>
+        <th>Phone Number</th>
+        <th>Time Order Received</th>
+        <th>Time Until Ready</th>
+        <th>Order Details</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Yes</td>
+          <td>Person 1</td>
+          <td>416-141-2414</td>
+          <td>10:00</td>
+          <td>30min</td>
+          <td><a href="#">Order</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>No</td>
+          <td>Person 2</td>
+          <td>647-241-1953</td>
+          <td>15:20</td>
+          <td>12min</td>
+          <td><a href="#">Order</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>No</td>
+          <td>Person 3</td>
+          <td>930-213-8510</td>
+          <td>4:30</td>
+          <td>50min</td>
+          <td><a href="#">Order</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <form method="GET" action="/" class="return-button"><button class="main-menu-button">Return to Main Menu</button></form>
+  </article>
   <div>Order Banner</div>
   <div>Table for Data</div>
 
