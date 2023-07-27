@@ -12,18 +12,75 @@
   <link rel="stylesheet" href="/styles/menu.css" />
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/client-order.css" />
 
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
-  
+  <script src="/scripts/client_order.js"></script>
+
 </head>
 <body>
   <%- include('partials/_header') %>
-  <article>
-    <div>Thank You Banner</div>
-    <div>Order Details</div>
-    <div>Order Contents</div>
-    <form method="GET" action="/"><button>Return to Main Menu</button></form>
+  <article class="order-container">
+    <div class="thank-you-banner">
+      <span class="thank-you-msg"><a>Thank You Valued Customer</a></span>
+    </div>
+    <span class="order-details-msg">Order Details</span>
+    <div class="order-details">
+      <table>
+        <tbody>
+          <tr>
+            <th>Order ID</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>Name</th>
+            <td>Fake Name</td>
+          </tr>
+          <tr>
+            <th>Address</th>
+            <td>Fake Address</td>
+          </tr>
+          <tr>
+            <th>SMS Sent</th>
+            <td>YES</td>
+          </tr>
+          <tr>
+            <th>Time Ordered</th>
+            <td>12:00</td>
+          </tr>
+          <tr>
+            <th>Time Until Pickup</th>
+            <td>30 min</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <thead>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mac'n'Cheese</td>
+            <td>1</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Wine</td>
+            <td>1</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>Cheese</td>
+            <td>3</td>
+            <td>$10.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <form method="GET" action="/"><button class="main-menu-button">Return to Main Menu</button></form>
   </article>
 </body>
 </html>
