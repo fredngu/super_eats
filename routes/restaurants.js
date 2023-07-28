@@ -78,7 +78,4 @@ router.get('/:restaurant_id/orders/:id', (req, res) => {
     });
 });
 
-
-
-
 module.exports = router;

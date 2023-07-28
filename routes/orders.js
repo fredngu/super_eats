@@ -5,6 +5,8 @@ const router  = express.Router();
 const customersQueries = require('../db/queries/customers');
 const ordersQueries = require('../db/queries/orders');
 
+let clientOrders = {};
+
 router.get('/signin/:id', (req, res) => {
   const customerId = req.params.id;
   // Assuming you have a function to sign in the customer and set session ID
@@ -28,11 +30,11 @@ router.get('/:id', (req, res) => {
       if (!order) {
         return res.status(404).json({ error: 'Order not found' });
       }
-      let amount;
       let message;
       let sms = { 'value' : 'No'};
       let time;
-      res.render('client_order', { amount, message, sms, time });
+      let clientObj = clientOrders
+      res.render('client_order', { clientObj, message, sms, time });
     })
     .catch(err => {
       res.status(500).json({ error: err.message });
@@ -58,14 +60,13 @@ function sendTextMsg(msg){
   .catch(error => console.log(error))
 }
 
-
 router.post('/sms', (req, res) => {
   const {time} = req.body;
   sendTextMsg(`${time}mins til pick up at Luigi's Restaurant`)
   .then((message) => {
-    let amount = {item1: 2, item2: 1, item3: 3};
+    let clientObj = clientOrders
     let sms = {value: 'Yes'}
-    res.render(`client_order`, {amount, message, time, sms})
+    res.render(`client_order`, {clientObj, message, time, sms})
   });
 })
 
@@ -83,15 +84,22 @@ router.post('/', (req, res) => {
     });
 });
 
-
 router.post('/:id', (req, res) => {
   const id = req.params.id
   const amount = req.body;
+  console.log(amount)
+  clientOrders = {
+    item1: amount['item1'],
+    item2: amount['item2'],
+    item3: amount['item3'],
+  }
+  let clientObj = clientOrders
   let message;
   let sms = { value : 'No'};
   let time;
-  res.render(`client_order`, {amount, message, sms, time})
+  res.render(`client_order`, {clientObj, message, sms, time})
 });
 
-
 module.exports = router;
+
+

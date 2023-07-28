@@ -72,20 +72,20 @@
           <th>Price</th>
         </thead>
         <tbody>
-          <% if(amount !== undefined) { %>
+          <% if(clientObj !== undefined) { %>
             <tr>
               <td>Aracini</td>
-              <td><%= amount['item1'] %></td>
+              <td><%= clientObj['item1'] %></td>
               <td>$13.00</td>
             </tr>
             <tr>
               <td>Pasta</td>
-              <td><%= amount['item2'] %></td>
+              <td><%= clientObj['item2'] %></td>
               <td>$25.00</td>
             </tr>
             <tr>
               <td>Panettonne</td>
-              <td><%= amount['item3'] %></td>
+              <td><%= clientObj['item3'] %></td>
               <td>$12.00</td>
             </tr>
           <% } else { %>
