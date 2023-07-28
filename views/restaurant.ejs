@@ -4,6 +4,8 @@
 <head>
   <title>Restaurant - Orders</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,8 +38,8 @@
         Luigi's Restaurant
       </header>
       <article class="menu-sections">
-        <span class="menu-title">Appetizers</span>
-        <form id='counter' method='POST' class='quantity' action='/orders/1'></form>
+        <form id='counter' method='POST' action='/orders'>
+          <span class="menu-title">Appetizers</span>
           <section class="menu-option">
             <img class="menu-image" src="../images/aracini.jpg">
             <div class="menu-items">Aracini</div>
@@ -53,8 +55,7 @@
             <div class="menu-items">Caprese</div>
             <input type='text' name='quantity' value='0' class='qty' />
           </section>
-
-        <span class="menu-title">Main Course</span>
+          <span class="menu-title">Main Course</span>
           <section class="menu-option">
             <img class="menu-image" src="../images/pasta.jpg">
             <div class="menu-items">Pasta</div>
@@ -70,8 +71,7 @@
             <div class="menu-items">Eggplant Parm</div>
             <input type='text' name='quantity' value='0' class='qty' />
           </section>
-
-        <span class="menu-title">Dessert</span>
+          <span class="menu-title">Dessert</span>
           <section class="menu-option">
             <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/perfect-wholegrain-bread.jpg">
             <div class="menu-items">Panettonne</div>
@@ -87,11 +87,14 @@
             <div class="menu-items">Limoncello</div>
             <input type='text' name='quantity' value='0' class='qty' />
           </section>
+          <button type="submit" class="btn btn-success btn-lg">Submit Order</button>
           <div class="order-button">
-          <form id="checkout" method="GET" action='/orders/1'>
+          <!-- <form id="checkout" method="GET" action='/orders/1'>
             <button class="menu-items" type="submit">Place Order</button>
-          </form>
+          </form> -->
+
           </div>
+
         </form>
       </article>
     </div>

@@ -11,8 +11,6 @@
 
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
   <link rel="stylesheet" href="/vendor/border-box.css" />
-  <link rel="stylesheet" href="/styles/menu.css" />
-  <link rel="stylesheet" href="/styles/main.css" />
   <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="/styles/nav.css" />
   <link rel="stylesheet" href="/styles/restaurant-all-orders.css" />
@@ -29,11 +27,12 @@
   <script src="/vendor/jquery-3.0.0.js"></script>
   <script defer src="/scripts/app.js"></script>
 </head>
+
 <body>
   <%- include('partials/_header') %>
   <article class="res-order-section">
     <div class="order-banner">
-      <span class="order-banner-msg"><a>Luigi's Orders</a></span>
+      <span class="order-banner-msg"><a class="msg-font">Luigi's Orders</a></span>
     </div>
     <table class="order-table">
       <thead>
@@ -49,7 +48,7 @@
         <tr>
           <td>1</td>
           <td>Yes</td>
-          <td>Person 1</td>
+          <td>Frual Glawarren</td>
           <td>416-141-2414</td>
           <td>10:00</td>
           <td>30min</td>
