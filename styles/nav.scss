@@ -1,14 +1,66 @@
+$main-color: #d1e2e3;
+$secondary-color: #0d7377;
+$color-3: #129fa5;
+
 .navbar {
   background-color: white;
   width: 100%;
-  height: 20%;
+  height: 50%;
   display: flex;
-  align-items: flex-start;
+  justify-content: space-around;
+  background-image: url("/images/restaurant-background.png");;
 }
 
-.navbar a {
-  color: #333;
-  padding: 14px 16px;
+.navbar-left {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+
+.navbar-right {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+
+}
+.navbar-left .button-left {
+  font-weight: 500;
+  width: 40%;
+  background-color: #129fa5;
+  color: white;
   text-decoration: none;
+  border: solid black;
+  text-align: center;
+  margin-right: 1%;
+}
+
+.navbar-right .button-right {
+  font-weight: 500;
+  width: 40%;
+  background-color: #129fa5;
+  color: white;
+  text-decoration: none;
+  border: solid black;
+  text-align: center;
+  margin-right: 1%;
+}
+
+.nav-button {
+  width: 100%;
+  height: 100%;
+  padding: none;
+  background-color: #129fa5;
+  color: white;
+  border: none;
+  font-size: 20px;
+}
+
+.navbar img {
+  width: 15%;
+  height: 100%;
+  margin-right: 2%;
+  margin-left: 2%;
 }
 
