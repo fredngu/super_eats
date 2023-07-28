@@ -37,61 +37,61 @@
         Luigi's Restaurant
       </header>
       <article class="menu-sections">
-        <form id='counter' method='POST' action='/orders'>
+        <form id='counter' method='POST' action='/orders/1'>
           <span class="menu-title">Appetizers</span>
           <section class="menu-option">
             <img class="menu-image" src="../images/aracini.jpg">
-            <div class="menu-items">Aracini</div>
-            <input type='text' name='item1' value='0' class='qty' />
+            <div class="menu-items"><a>Aracini</a></div>
+            <input type='number' name='item1' value='0' class='btn' />
           </section>
           <section class="menu-option">
             <img class="menu-image" src="../images/bruschetta.jpg">
-            <div class="menu-items">Bruschetta</div>
-            <input type='text' name='quantity' value='0' class='qty' />
+            <div class="menu-items"><a>Bruschetta</a></div>
+            <input type='number' name='quantity' value='0' class='btn' />
           </section>
           <section class="menu-option">
             <img class="menu-image" src="../images/caprese.jpg">
-            <div class="menu-items">Caprese</div>
-            <input type='text' name='quantity' value='0' class='qty' />
+            <div class="menu-items"><a>Caprese</a></div>
+            <input type='number' name='quantity' value='0' class='btn' />
           </section>
           <span class="menu-title">Main Course</span>
           <section class="menu-option">
             <img class="menu-image" src="../images/pasta.jpg">
-            <div class="menu-items">Pasta</div>
-            <input type='text' name='item2' value='0' class='qty' />
+            <div class="menu-items"><a>Pasta</a></div>
+            <input type='number' name='item2' value='0' class='btn' />
           </section>
           <section class="menu-option">
             <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2015/03/basic-italian-pizza-margherita.jpg">
-            <div class="menu-items">Pizza</div>
-            <input type='text' name='quantity' value='0' class='qty' />
+            <div class="menu-items"><a>Pizza</a></div>
+            <input type='number' name='quantity' value='0' class='btn' />
           </section>
           <section class="menu-option">
             <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2020/06/cannelloni-de-beringela.jpg">
-            <div class="menu-items">Eggplant Parm</div>
-            <input type='text' name='quantity' value='0' class='qty' />
+            <div class="menu-items"><a>Eggplant Parm</a></div>
+            <input type='number' name='quantity' value='0' class='btn' />
           </section>
           <span class="menu-title">Dessert</span>
           <section class="menu-option">
             <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/perfect-wholegrain-bread.jpg">
-            <div class="menu-items">Panettonne</div>
-            <input type='text' name='item3' value='0' class='qty' />
+            <div class="menu-items"><a>Panettonne</a></div>
+            <input type='number' name='item3' value='0' class='btn' />
           </section>
           <section class="menu-option">
             <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2016/03/fancy-ice-cream-dessert.jpg">
-            <div class="menu-items">Tiramisu</div>
-            <input type='text' name='quantity' value='0' class='qty' />
+            <div class="menu-items"><a>Tiramisu</a></div>
+            <input type='number' name='quantity' value='0' class='btn' />
           </section>
           <section class="menu-option">
             <img class="menu-image" src='https://www.foodiesfeed.com/wp-content/uploads/2022/11/fancy-dessert-with-biscuit-on-top.jpg'>
-            <div class="menu-items">Limoncello</div>
-            <input type='text' name='quantity' value='0' class='qty' />
+            <div class="menu-items"><a>Limoncello</a></div>
+            <input type='number' name='quantity' value='0' class='btn' />
           </section>
-          <button type="submit" class="btn btn-success btn-lg">Submit Order</button>
+
           <div class="order-button">
           <!-- <form id="checkout" method="GET" action='/orders/1'>
             <button class="menu-items" type="submit">Place Order</button>
           </form> -->
-
+            <button type="submit" class="btn btn-success btn-lg">Submit Order</button>
           </div>
 
         </form>

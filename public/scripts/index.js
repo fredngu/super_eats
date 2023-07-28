@@ -23,7 +23,7 @@ const loadRestaurant = (restaurant) => {
       <div><img src=${restaurant.image}></div>
       <div><p class="restaurant-description">${restaurant.description}</p></div>
       <form method="GET" action="/restaurants/1">
-        <button class="menu-items">View Menu</button>
+        <button class="btn btn-success btn-lg">View Menu</button>
       </form>
     </article>
     `

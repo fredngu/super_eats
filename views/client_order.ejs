@@ -72,25 +72,43 @@
           <th>Price</th>
         </thead>
         <tbody>
-          <tr>
-            <td>Aracini</td>
-            <td>1</td>
-            <td>$13.00</td>
-          </tr>
-          <tr>
-            <td>Pasta</td>
-            <td>1</td>
-            <td>$25.00</td>
-          </tr>
-          <tr>
-            <td>Panettonne</td>
-            <td>1</td>
-            <td>$12.00</td>
-          </tr>
+          <% if(amount !== undefined) { %>
+            <tr>
+              <td>Aracini</td>
+              <td><%= amount['item1'] %></td>
+              <td>$13.00</td>
+            </tr>
+            <tr>
+              <td>Pasta</td>
+              <td><%= amount['item2'] %></td>
+              <td>$25.00</td>
+            </tr>
+            <tr>
+              <td>Panettonne</td>
+              <td><%= amount['item3'] %></td>
+              <td>$12.00</td>
+            </tr>
+          <% } else { %>
+            <tr>
+              <td>Aracini</td>
+              <td>2</td>
+              <td>$13.00</td>
+            </tr>
+            <tr>
+              <td>Pasta</td>
+              <td>1</td>
+              <td>$25.00</td>
+            </tr>
+            <tr>
+              <td>Panettonne</td>
+              <td>3</td>
+              <td>$12.00</td>
+            </tr>
+          <% } %>
         </tbody>
       </table>
     </div>
-    <form method="GET" action="/"><button class="main-menu-button">Return to Main Menu</button></form>
+    <form method="GET" action="/"><button class="btn btn-success btn-lg">Return to Main Menu</button></form>
   </article>
 </body>
 </html>

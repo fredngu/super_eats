@@ -2,20 +2,20 @@ $main-color: #d1e2e3;
 $secondary-color: #0d7377;
 $color-3: #129fa5;
 
-// .res-order-section {
-//   display: flex;
-//   padding: 5%;
-//   margin: 5%;
-//   width: 90%;
-//   height: 100%;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   border: 10px $secondary-color;
-//   border-style: solid;
-//   border-radius: 25px;
-//   background-image: url("/images/beige-tiles.png");
-// }
+.res-order-section {
+  display: flex;
+  padding: 5%;
+  margin: 5%;
+  width: 90%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 10px $secondary-color;
+  border-style: solid;
+  border-radius: 25px;
+  background-image: url("/images/beige-tiles.png");
+}
 
 .order-banner {
   margin: 1%;
@@ -41,7 +41,7 @@ $color-3: #129fa5;
   background: rgb(0, 0, 0, 0.8)
 }
 
-.order-banner-msg .msg-font{
+.order-banner-msg a {
   font-size: 5vh;
   color: white;
   opacity: 100%;

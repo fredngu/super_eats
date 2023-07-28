@@ -2,7 +2,6 @@
 $main-color: #d1e2e3;
 $secondary-color: #0d7377;
 $color-3: #129fa5;
-$header-font: 'Norwester';
 
 body {
   font-family: 'Bungee', cursive;
@@ -26,7 +25,6 @@ body {
 }
 
 .restaurant-containers .restaurants {
-  font-family: $header-font;
   display: flex;
   padding-top: 5vh;
   flex-direction: column;

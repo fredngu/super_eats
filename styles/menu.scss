@@ -28,10 +28,21 @@ $color-3: #129fa5;
   border-style: solid;
   border-radius: 25px;
   background-color: beige;
+  background-image: url("/images/restaurant-order-banner.jpg");
+  background-size: cover;
+  color: white;
+  font-family: 'Bungee', cursive;
+  font-family: 'Cedarville Cursive', cursive;
 }
 
 .menu-title {
-  font-size: 5vh;
+  font-size: 7vh;
+  margin: 2%;
+  color: black;
+  opacity: 100%;
+  font-family: 'Bungee', cursive;
+  font-family: 'Cedarville Cursive', cursive;
+
 }
 .menu-sections {
   display: flex;
@@ -44,34 +55,44 @@ $color-3: #129fa5;
 }
 
 .menu-option {
-  width: 50%;
+  width: 80%;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  margin: 5px;
+  background-color: #129fa5;
+  padding: 1%;
 }
 
 .menu-items {
-  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.menu-items a {
+  font-size: 5vh;
+  color: white;
+}
 .menu-image {
   height: 100px;
   width: 100px;
 }
 
-// #counter {
-//   text-align: center;
-//   padding: 5px;
-//   margin: 2%;
-// }
+#counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
 .qty {
   width: 40px;
   height: 25px;
   text-align: center;
 }
 
+.order-button {
+  margin: 2%;
+}
