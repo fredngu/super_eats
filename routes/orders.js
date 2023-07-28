@@ -29,7 +29,10 @@ router.get('/:id', (req, res) => {
         return res.status(404).json({ error: 'Order not found' });
       }
       let amount;
-      res.render('client_order', { amount });
+      let message;
+      let sms = { 'value' : 'No'};
+      let time;
+      res.render('client_order', { amount, message, sms, time });
     })
     .catch(err => {
       res.status(500).json({ error: err.message });
@@ -41,24 +44,29 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken);
 
 function sendTextMsg(msg){
-  client.messages
+  return client.messages
   .create({
     to: process.env.MY_PHONE_NUMBER,
     from: process.env.MY_TWILIO_NUMBER,
     body: msg
   })
   .then((message) => {
-    console.log(message.sid)
+    console.log(message.sid);
+    return message;
+
   })
   .catch(error => console.log(error))
 }
 
+
 router.post('/sms', (req, res) => {
   const {time} = req.body;
-  console.log(time);
-  sendTextMsg(`${time}mins til pick up at Luigi's Restaurant`);
-  let amount;
-  res.render(`client_order`, {amount})
+  sendTextMsg(`${time}mins til pick up at Luigi's Restaurant`)
+  .then((message) => {
+    let amount = {item1: 2, item2: 1, item3: 3};
+    let sms = {value: 'Yes'}
+    res.render(`client_order`, {amount, message, time, sms})
+  });
 })
 
 
@@ -79,7 +87,10 @@ router.post('/', (req, res) => {
 router.post('/:id', (req, res) => {
   const id = req.params.id
   const amount = req.body;
-  res.render(`client_order`, {amount})
+  let message;
+  let sms = { value : 'No'};
+  let time;
+  res.render(`client_order`, {amount, message, sms, time})
 });
 
 
