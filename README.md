@@ -1,6 +1,6 @@
 # SuperEats - Food Pickup Application
 
-![SuperEats Logo](https://yourdomain.com/logo.png)
+![SuperEats Logo](https://github.com/fredngu/super_eats/blob/master/public/images/miniLogoSuperEats.png)
 
 SuperEats is a food pickup application that allows customers to order delicious food from their favorite restaurants and have it ready for pickup. With an easy-to-use interface and a wide selection of restaurants and menu items, SuperEats provides a seamless food ordering experience. is part of LightHouse Labs Bootcamp.
 
