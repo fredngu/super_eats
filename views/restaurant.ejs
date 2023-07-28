@@ -1,72 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Restaurant - Orders</title>
 
-    <meta charset="UTF-8" >
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<head>
+  <title>Restaurant - Orders</title>
 
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
-    <link rel="stylesheet" href="/vendor/border-box.css" />
-    <link rel="stylesheet" href="/styles/menu.css" />
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/layout.css" />
-    <link rel="stylesheet" href="/styles/nav.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cedarville+Cursive&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/menu.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
+  <link rel="stylesheet" href="/styles/nav.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cedarville+Cursive&family=Rubik&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cedarville+Cursive&display=swap" rel="stylesheet">
 
-    <script src="/vendor/jquery-3.0.0.js"></script>
-    <script defer src="/scripts/app.js"></script>
-  </head>
-  <body>
-    <%- include('partials/_header') %>
-  <div class="menu-containers">
-    <header class="menu-header">
-      Luigi's Restaurant
-    </header>
-    <article class="menu-sections">
-      <span class="menu-title">Appetizers</span>
-      <section class="menu-option">
-          <img class="menu-image" src="images/aracini.jpg">
-        <div class="menu-items">Aracini</div>
-        <form id='counter' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Cedarville+Cursive&family=Rubik&display=swap"
+    rel="stylesheet">
+
+  <script src="/vendor/jquery-3.0.0.js"></script>
+  <script defer src="/scripts/app.js"></script>
+</head>
+
+<body>
+  <%- include('partials/_header') %>
+    <div class="menu-containers">
+      <header class="menu-header">
+        Luigi's Restaurant
+      </header>
+      <article class="menu-sections">
+        <span class="menu-title">Appetizers</span>
+        <form id='counter' method='POST' class='quantity' action='/orders/1'></form>
+          <section class="menu-option">
+            <img class="menu-image" src="../images/aracini.jpg">
+            <div class="menu-items">Aracini</div>
+            <input type='text' name='item1' value='0' class='qty' />
+          </section>
+          <section class="menu-option">
+            <img class="menu-image" src="../images/bruschetta.jpg">
+            <div class="menu-items">Bruschetta</div>
+            <input type='text' name='quantity' value='0' class='qty' />
+          </section>
+          <section class="menu-option">
+            <img class="menu-image" src="../images/caprese.jpg">
+            <div class="menu-items">Caprese</div>
+            <input type='text' name='quantity' value='0' class='qty' />
+          </section>
+
+        <span class="menu-title">Main Course</span>
+          <section class="menu-option">
+            <img class="menu-image" src="../images/pasta.jpg">
+            <div class="menu-items">Pasta</div>
+            <input type='text' name='item2' value='0' class='qty' />
+          </section>
+          <section class="menu-option">
+            <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2015/03/basic-italian-pizza-margherita.jpg">
+            <div class="menu-items">Pizza</div>
+            <input type='text' name='quantity' value='0' class='qty' />
+          </section>
+          <section class="menu-option">
+            <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2020/06/cannelloni-de-beringela.jpg">
+            <div class="menu-items">Eggplant Parm</div>
+            <input type='text' name='quantity' value='0' class='qty' />
+          </section>
+
+        <span class="menu-title">Dessert</span>
+          <section class="menu-option">
+            <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2015/09/perfect-wholegrain-bread.jpg">
+            <div class="menu-items">Panettonne</div>
+            <input type='text' name='item3' value='0' class='qty' />
+          </section>
+          <section class="menu-option">
+            <img class="menu-image" src="https://www.foodiesfeed.com/wp-content/uploads/2016/03/fancy-ice-cream-dessert.jpg">
+            <div class="menu-items">Tiramisu</div>
+            <input type='text' name='quantity' value='0' class='qty' />
+          </section>
+          <section class="menu-option">
+            <img class="menu-image" src='https://www.foodiesfeed.com/wp-content/uploads/2022/11/fancy-dessert-with-biscuit-on-top.jpg'>
+            <div class="menu-items">Limoncello</div>
+            <input type='text' name='quantity' value='0' class='qty' />
+          </section>
+          <div class="order-button">
+          <form id="checkout" method="GET" action='/orders/1'>
+            <button class="menu-items" type="submit">Place Order</button>
+          </form>
+          </div>
         </form>
-      </section>
-      <section class="menu-option">
-        <img class="menu-image" src="images/bruschetta.jpg">
-        <div class="menu-items">Bruschetta</div>
-        <form id='counter' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
-        </form>
-      </section>
-      <section class="menu-option">
-        <img class="menu-image" src="images/caprese.jpg">
-        <div class="menu-items">Caprese</div>
-        <form id='counter' method='POST' class='quantity' action='#'>
-          <input type='button' value='-' class='qtyminus minus' field='quantity' />
-          <input type='text' name='quantity' value='0' class='qty' />
-          <input type='button' value='+' class='qtyplus plus' field='quantity' />
-        </form>
-      </section>
-      <div class="order-button">
-        <form id="checkout" method="POST" action='#'>
-          <button class="menu-items">Place Order</button>
-        </form>
-      </div>
-    </article>
-  </div>
+      </article>
+    </div>
 </body>
 </html>

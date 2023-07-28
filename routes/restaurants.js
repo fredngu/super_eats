@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
   const restaurantId = req.params.id;
   Promise.all([
     restaurantsQueries.getRestaurantById(restaurantId),
-    restaurantsQueries.getMenuItemsForRestaurant(restaurantId)
+    // restaurantsQueries.getMenuItemsForRestaurant(restaurantId)
   ])
     .then(([restaurant, menuItems]) => {
       if (!restaurant) {
@@ -62,5 +62,23 @@ router.get('/signin/:id', (req, res) => {
       res.status(500).json({ error: err.message });
     });
 });
+
+
+
+// Route: GET /restaurants/:restaurant_id/orders - Get all orders for a restaurant
+router.get('/:restaurant_id/orders/:id', (req, res) => {
+  const restaurantId = req.params.restaurant_id;
+  // TODO: create a function to get all orders for a specific restaurant
+  ordersQueries.getAllOrdersForRestaurant(restaurantId)
+    .then(orders => {
+      res.render('restaurant_order', { orders });
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message });
+    });
+});
+
+
+
 
 module.exports = router;

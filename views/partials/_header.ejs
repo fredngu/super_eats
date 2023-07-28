@@ -2,19 +2,16 @@
   <nav class="navbar">
     <div class="navbar-left">
       <img src="../../images/logoSuperEats.png">
-      <form class="button-left">
-        <button class="nav-button">Super-Eats</button>
+      <form class="button-left" method="GET" action="/">
+        <button class="nav-button">Main Page</button>
       </form>
-      <form class="button-left">
-        <button class="nav-button">Orders</button>
+      <form class="button-left"  method="GET" action="/restaurants/1/orders/">
+        <button class="nav-button">Restaurant Login</button>
       </form>
     </div>
     <div class="navbar-right">
-      <form class="button-right">
-        <button class="nav-button">Restaurant Login</button>
-      </form>
-      <form class="button-right">
-        <button class="nav-button">User Login</button>
+      <form class="button-right"  method="GET" action="/orders/1">
+        <button class="nav-button">Customer Orders</button>
       </form>
     </div>
   </nav>

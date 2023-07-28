@@ -49,4 +49,22 @@ router.post('/', (req, res) => {
     });
 });
 
+
+router.post('/:id', (req, res) => {
+  const { item1, item2, item3 } = req.body;
+  console.log(item1, item2, item3);
+  // TODO: Create a function to create a new order
+  ordersQueries.createOrder(item1, item2, item3)
+    .then((newOrder) => {
+      // res.json({ newOrder }); IF we want to display the order contents as json
+      console.log(newOrder)
+      red.redirect("/:id", {newOrder})
+      res.send("Thanks for your order!");
+    })
+    .catch(err => {
+      res.status(500).json({ error: err.message });
+    });
+});
+
+
 module.exports = router;

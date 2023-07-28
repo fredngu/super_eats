@@ -3,6 +3,8 @@
 <head>
   <title>Restaurant - All Order</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
   <meta charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -51,7 +53,9 @@
           <td>416-141-2414</td>
           <td>10:00</td>
           <td>30min</td>
-          <td><a href="#">Order</a></td>
+          <td>
+            <form method="GET" action="/restaurants/1/orders/1"><button class="btn btn-success">Order</button></form>
+          </td>
         </tr>
         <tr>
           <td>2</td>
@@ -60,7 +64,7 @@
           <td>647-241-1953</td>
           <td>15:20</td>
           <td>12min</td>
-          <td><a href="#">Order</a></td>
+          <td><form method="GET" action="/restaurants/1/orders/2" ><button class="btn btn-success">Order</button></form></td>
         </tr>
         <tr>
           <td>3</td>
@@ -69,7 +73,9 @@
           <td>930-213-8510</td>
           <td>4:30</td>
           <td>50min</td>
-          <td><a href="#">Order</a></td>
+          <td>
+            <form method="GET" action="/restaurants/1/orders/3"><button class="btn btn-success">Order</button></form>
+          </td>
         </tr>
       </tbody>
     </table>

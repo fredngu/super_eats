@@ -5,8 +5,9 @@ $color-3: #129fa5;
 .menu-containers {
   display: flex;
   margin: 5%;
+  padding: 2%;
   width: 90%;
-  height: 120vh;
+  height: 100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -21,8 +22,11 @@ $color-3: #129fa5;
   align-items: center;
   justify-content: center;
   font-size: 10vh;
-  margin: 5vh;
-  width: 100%;
+  margin: 5%;
+  width: 90%;
+  border: 10px $secondary-color;
+  border-style: solid;
+  border-radius: 25px;
   background-color: beige;
 }
 
