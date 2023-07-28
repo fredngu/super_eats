@@ -36,6 +36,31 @@ router.get('/:id', (req, res) => {
     });
 });
 
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = require('twilio')(accountSid, authToken);
+
+function sendTextMsg(msg){
+  client.messages
+  .create({
+    to: process.env.MY_PHONE_NUMBER,
+    from: process.env.MY_TWILIO_NUMBER,
+    body: msg
+  })
+  .then((message) => {
+    console.log(message.sid)
+  })
+  .catch(error => console.log(error))
+}
+
+router.post('/sms', (req, res) => {
+  const {time} = req.body;
+  console.log(time);
+  sendTextMsg(`${time}mins til pick up at Luigi's Restaurant`);
+  let amount;
+  res.render(`client_order`, {amount})
+})
+
 
 router.post('/', (req, res) => {
   const { customerId, smsSent, orderDate, minsTillReady, restaurantId } = req.body;

@@ -35,15 +35,13 @@
       <span class="order-banner-msg"><a>Order #1</a></span>
     </div>
     <div class="order-time">
-      <div class="time-info">
-        <form action="#" method="#" id="time-input">
+      <form action="/orders/sms" method="POST" id="time-input">
+        <div class="time-info">
           <label for="time" class="time-label">Time Until Ready (min):</label>
           <input type="text" id="time" name="time">
-        </form>
-      </div>
-      <div class="sms-container">
-        <button class="btn btn-info btn-lg" form="time-input" type="submit" value="submit">Send SMS</button>
-      </div>
+          <button class="btn btn-info btn-lg" type="submit">Send SMS</button>
+        </div>
+      </form>
     </div>
     <table class="order-table">
       <thead>
